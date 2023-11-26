@@ -3,4 +3,4 @@ project(TDG_project C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(TDG_project main.c)
+add_executable(TDG_project main.c header.h)
