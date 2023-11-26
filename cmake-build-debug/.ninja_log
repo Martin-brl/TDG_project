@@ -1,0 +1,4 @@
+# ninja log v5
+2	179	7227175751980144	build.ninja	dd36bfca6aada5d8
+0	56	7227175752704049	CMakeFiles/TDG_project.dir/main.c.obj	27f756f10bb853c6
+56	119	7227175753299619	TDG_project.exe	b8c578e16598e46a
