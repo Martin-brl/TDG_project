@@ -9,7 +9,7 @@ struct Operation *lire_operations(FILE *fichier, int *nombre_operations) {
     char ligne[100];
     int capacity = 1;  // Initial capacity of the array
     struct Operation *operations = (struct Operation *)malloc(capacity * sizeof(struct Operation));
-
+// tets
     if (fichier == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
         return NULL;
