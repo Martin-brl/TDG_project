@@ -1,0 +1,9 @@
+int recherche(int nombre, struct Operation *operations)
+{
+    int i=0;
+    while(nombre!=operations[i].id && i<31)
+    {
+        i++;
+    }
+    return i;
+}
