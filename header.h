@@ -21,11 +21,5 @@ struct Arc
 /* Alias de pointeur sur un Arc */
 typedef struct Arc* pArc;
 
-struct Operation
-{
-    int id;
-    float temps_dexecution;
-    struct Arc* arc;
-};
 
 #endif //TDG_PROJECT_HEADER_H
