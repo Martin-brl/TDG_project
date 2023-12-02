@@ -1,0 +1,11 @@
+void afficher_graphe(struct Graphe_predecedence *graphe,int nombre_operations) {
+    for (int i = 0; i < nombre_operations; i++) {
+        printf("Sommet %d : ", i);
+        pArc currentArc = graphe->operations[i].arc;
+        while (currentArc != NULL) {
+            printf("%d ", currentArc->id_suivant);
+            currentArc = currentArc->arc_suivant;
+        }
+        printf("\n");
+    }
+}
