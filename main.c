@@ -9,7 +9,7 @@ struct Operation *lire_operations(FILE *fichier, int *nombre_operations) {
     char ligne[100];
     int capacity = 1;  // Initial capacity of the array
     struct Operation *operations = (struct Operation *)malloc(capacity * sizeof(struct Operation));
-// tets
+
     if (fichier == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
         return NULL;
@@ -41,6 +41,49 @@ struct Operation *lire_operations(FILE *fichier, int *nombre_operations) {
 
     return operations;
 }
+
+int recherche(int nombre, struct Operation *operations)
+{
+    int i=0;
+    while(nombre!=operations[i].id && i<31)
+    {
+        i++;
+    }
+    return i;
+}
+
+struct Operation *CreerArete(struct Operation *Operations, int s1, int s2) {
+    pArc Newarc = (pArc)malloc(sizeof(struct Arc));
+    Newarc->id_suivant = s2;
+    Newarc->arc_suivant = NULL;
+
+    pArc currentArc = Operations[s1].arc;
+    if (currentArc == NULL) {
+        Operations[s1].arc = Newarc;
+    } else {
+        while (currentArc->arc_suivant != NULL) {
+            currentArc = currentArc->arc_suivant;
+        }
+        currentArc->arc_suivant = Newarc;
+    }
+    return Operations;
+}
+
+struct Graphe_predecedence *CreerGraphe(int nombre_operations,struct Operation *operations) {
+    struct Graphe_predecedence *Newgraphe = (struct Graphe_predecedence*)malloc(sizeof(struct Graphe_predecedence));
+    Newgraphe->operations=(struct Operation*)malloc(nombre_operations * sizeof(struct Operation));
+    Newgraphe->matrice_adj = (int **)malloc(nombre_operations * sizeof(int*));
+    Newgraphe->temps_cycle=0;
+    for (int i = 0; i < nombre_operations; i++) {
+        Newgraphe->matrice_adj[i] = (int *)malloc(nombre_operations * sizeof(int));
+        Newgraphe->operations[i] = operations[i];
+    }
+    for (int i = 0; i < nombre_operations; i++) {
+        for (int j = 0; j < nombre_operations; j++) {
+            Newgraphe->matrice_adj[i][j]=-1;
+        }
+    }
+    return Newgraphe;
 
 int main()
 {
