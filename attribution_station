@@ -1,0 +1,41 @@
+void attribution_station(int* bfs, struct Operation* operations, struct Station* station, int nombre_operations, struct Graphe_predecedence* Graphe, int** matrice) {
+    int i = 0;
+    while (fini(bfs, nombre_operations) != 1) {
+        station = (struct Station*)realloc(station, (i + 1) * sizeof(struct Station));
+        station[i].tmp_operation = 0;
+        float k = 0;
+        int tmp2 = 0;
+        station[i].tmp_operation=0;
+        station[i].operations = (struct Operation*)malloc(nombre_operations * sizeof(struct Operation));
+        for(int j=0;j<nombre_operations;j++)
+        {
+            if(station[i].tmp_operation < Graphe->temps_cycle)
+            {
+                if (bfs[j] != -1)
+                {
+                    if(tmp2==0)
+                    {
+                        station[i].operations[tmp2].id=0;
+                    }
+                    if(incompatibilite(station[i], j, matrice, tmp2, operations,nombre_operations)==0)
+                    {
+                        station[i].operations[tmp2] = operations[j];
+                        station[i].operations[tmp2].id = operations[j].id;
+                        station[i].tmp_operation += operations[j].temps_dexecution;
+                        bfs[j]=-1;
+                        tmp2++;
+                    }
+                }
+            }
+        }
+
+        printf("STATION %d :\n", i+1);
+        for (int k = 0; k < tmp2; k++)
+        {
+            printf("OPERATION %d :  tmp exec %f\n", station[i].operations[k].id, station[i].operations[k].temps_dexecution);
+        }
+        printf("TEMPS EXEC TOTAL %f :\n", station[i].tmp_operation);
+
+        i++;
+    }
+}
