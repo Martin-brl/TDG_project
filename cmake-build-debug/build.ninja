@@ -55,6 +55,42 @@ build CMakeFiles/TDG_project.dir/main.c.obj: C_COMPILER__TDG_project_Debug C$:/U
   OBJECT_DIR = CMakeFiles\TDG_project.dir
   OBJECT_FILE_DIR = CMakeFiles\TDG_project.dir
 
+build CMakeFiles/TDG_project.dir/Menu.c.obj: C_COMPILER__TDG_project_Debug C$:/Users/nicol/CLionProjects/TDG_project/Menu.c || cmake_object_order_depends_target_TDG_project
+  DEP_FILE = CMakeFiles\TDG_project.dir\Menu.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\TDG_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\TDG_project.dir
+
+build CMakeFiles/TDG_project.dir/heuristique.c.obj: C_COMPILER__TDG_project_Debug C$:/Users/nicol/CLionProjects/TDG_project/heuristique.c || cmake_object_order_depends_target_TDG_project
+  DEP_FILE = CMakeFiles\TDG_project.dir\heuristique.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\TDG_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\TDG_project.dir
+
+build CMakeFiles/TDG_project.dir/sous_prog.c.obj: C_COMPILER__TDG_project_Debug C$:/Users/nicol/CLionProjects/TDG_project/sous_prog.c || cmake_object_order_depends_target_TDG_project
+  DEP_FILE = CMakeFiles\TDG_project.dir\sous_prog.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\TDG_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\TDG_project.dir
+
+build CMakeFiles/TDG_project.dir/Sous_prog_lecture_fichier.c.obj: C_COMPILER__TDG_project_Debug C$:/Users/nicol/CLionProjects/TDG_project/Sous_prog_lecture_fichier.c || cmake_object_order_depends_target_TDG_project
+  DEP_FILE = CMakeFiles\TDG_project.dir\Sous_prog_lecture_fichier.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\TDG_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\TDG_project.dir
+
+build CMakeFiles/TDG_project.dir/Sous_prog_structures.c.obj: C_COMPILER__TDG_project_Debug C$:/Users/nicol/CLionProjects/TDG_project/Sous_prog_structures.c || cmake_object_order_depends_target_TDG_project
+  DEP_FILE = CMakeFiles\TDG_project.dir\Sous_prog_structures.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\TDG_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\TDG_project.dir
+
+build CMakeFiles/TDG_project.dir/Sous_prog_optimisation.c.obj: C_COMPILER__TDG_project_Debug C$:/Users/nicol/CLionProjects/TDG_project/Sous_prog_optimisation.c || cmake_object_order_depends_target_TDG_project
+  DEP_FILE = CMakeFiles\TDG_project.dir\Sous_prog_optimisation.c.obj.d
+  FLAGS = -g -std=gnu11
+  OBJECT_DIR = CMakeFiles\TDG_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\TDG_project.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TDG_project
@@ -63,7 +99,7 @@ build CMakeFiles/TDG_project.dir/main.c.obj: C_COMPILER__TDG_project_Debug C$:/U
 #############################################
 # Link the executable TDG_project.exe
 
-build TDG_project.exe: C_EXECUTABLE_LINKER__TDG_project_Debug CMakeFiles/TDG_project.dir/main.c.obj
+build TDG_project.exe: C_EXECUTABLE_LINKER__TDG_project_Debug CMakeFiles/TDG_project.dir/main.c.obj CMakeFiles/TDG_project.dir/Menu.c.obj CMakeFiles/TDG_project.dir/heuristique.c.obj CMakeFiles/TDG_project.dir/sous_prog.c.obj CMakeFiles/TDG_project.dir/Sous_prog_lecture_fichier.c.obj CMakeFiles/TDG_project.dir/Sous_prog_structures.c.obj CMakeFiles/TDG_project.dir/Sous_prog_optimisation.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\TDG_project.dir

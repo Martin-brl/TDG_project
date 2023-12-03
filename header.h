@@ -1,63 +1,41 @@
-//
-// Created by nicol on 26/11/2023.
-//
+#include <stdio.h>
+#include <stdlib.h>
+#ifndef PROJET2023_HEADER_H
+#define PROJET2023_HEADER_H
 
-#ifndef TDG_PROJECT_HEADER_H
-#define TDG_PROJECT_HEADER_H
-
-typedef struct Chemin {
-    int sommets[35];
-    int taille;
-} Chemin;
-
+// Structure représentant un arc reliant deux opérations dans le graphe de précédence.
 struct Arc
 {
-    int id_suivant; // numéro de sommet d'un arc adjacent au sommet initial
-    struct Arc* arc_suivant;
+    int id_suivant;           // ID de l'opération suivante dans l'arc.
+    struct Arc* arc_suivant;  // Pointeur vers l'arc suivant dans la liste d'arcs.
 };
 
-/* Alias de pointeur sur un Arc */
+// Pointeur vers une structure Arc, utilisé pour simplifier la syntaxe.
 typedef struct Arc* pArc;
 
+// Structure représentant une opération dans le graphe de précédence.
 struct Operation
 {
-    int id;
-    float temps_dexecution;
-    struct Arc* arc;
+    int id;                        // Identifiant unique de l'opération.
+    float temps_dexecution;        // Temps d'exécution de l'opération.
+    struct Arc* arc;               // Liste d'arcs reliant cette opération à d'autres.
 };
 
-/* Alias de pointeur sur un Sommet */
-typedef struct Operation* pOperation;
-
+// Structure représentant une station de travail.
 struct Station
 {
-    struct Operation* operations; // Renommé pour éviter la confusion avec le type de structure
-    float tmp_operation;
+    struct Operation* operations;  // Tableau d'opérations associées à la station.
+    float temps_total;             // Temps total d'exécution des opérations dans la station.
+    int nombre_operations;         // Nombre d'opérations actuellement dans la station.
 };
 
-/* Alias de pointeur sur un Sommet */
-typedef struct Station* pStation; // Renommé pour éviter la collision de noms
-
-typedef enum Color {
-    WHITE,
-    GRAY,
-    BLACK
-} Color; // Defined the enum Color in the global scope
-
-typedef struct Graphe_predecedence {
-    struct Operation* operations;
-    float temps_cycle;
-    Color *colors;
-    int** matrice_adj;
+// Structure représentant le graphe de précédence des opérations.
+typedef struct Graphe_predecedence
+{
+    int** matrice_adjacence;       // Matrice d'adjacence pour représenter les relations entre les opérations.
+    int ordre;                     // Nombre total d'opérations dans le graphe.
+    struct Operation* operations;  // Tableau d'opérations dans le graphe.
+    float temps_cycle;             // Temps total nécessaire pour compléter un cycle dans le graphe.
 } Graphe_predecedence;
 
-/* Alias de pointeur sur un Sommet */
-typedef struct Graphe_predecedence* pGraphe_predecedence; // Renommé pour éviter la collision de noms
-
-struct Chaine_de_production // Ajout des champs manquants
-{
-    int taille;
-};
-typedef struct Chaine_de_production* pChaine_de_production; // Renommé pour éviter la collision de noms
-
-#endif //TDG_PROJECT_HEADER_H
+#endif //PROJET2023_HEADER_H
