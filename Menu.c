@@ -13,10 +13,10 @@ void menu() {
     int charge = 0;
     do {
         int nombre_operations = 0;
-        FILE *fope = fopen("/Users/keisaissaoui/CLionProjects/projet2023/operations.txt", "r");
-        FILE *fexclu = fopen("/Users/keisaissaoui/CLionProjects/projet2023/exclusions.txt", "r");
-        FILE *fprede = fopen("/Users/keisaissaoui/CLionProjects/projet2023/precedences.txt", "r");
-        FILE *ftmp = fopen("/Users/keisaissaoui/CLionProjects/projet2023/temps_cycle.txt", "r");
+        FILE *fope = fopen("C:/Users/nicol/Downloads/Cours-ECE-Année2/Algorithmique-Programmation/Théorie des graphes/ProjetSemestre1/projet2023/operations.txt", "r");
+        FILE *fexclu = fopen("C:/Users/nicol/Downloads/Cours-ECE-Année2/Algorithmique-Programmation/Théorie des graphes/ProjetSemestre1/projet2023/exclusions.txt", "r");
+        FILE *fprede = fopen("C:/Users/nicol/Downloads/Cours-ECE-Année2/Algorithmique-Programmation/Théorie des graphes/ProjetSemestre1/projet2023/precedences.txt", "r");
+        FILE *ftmp = fopen("C:/Users/nicol/Downloads/Cours-ECE-Année2/Algorithmique-Programmation/Théorie des graphes/ProjetSemestre1/projet2023/temps_cycle.txt", "r");
         struct Operation *operations = lire_operations(fope, &nombre_operations);
         int **matrice_exclusion = (int **)malloc(nombre_operations * sizeof(int *));
         for (int i = 0; i < nombre_operations; i++) {

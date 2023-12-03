@@ -2,3 +2,17 @@
 2	179	7233487959971905	build.ninja	dd36bfca6aada5d8
 0	56	7227175752704049	CMakeFiles/TDG_project.dir/main.c.obj	27f756f10bb853c6
 56	119	7227175753299619	TDG_project.exe	b8c578e16598e46a
+20	139	7233489679036854	CMakeFiles/TDG_project.dir/main.c.obj	27f756f10bb853c6
+10	140	7233489679046852	CMakeFiles/TDG_project.dir/Menu.c.obj	ee30895fe8668e98
+38	153	7233489679166839	CMakeFiles/TDG_project.dir/Sous_prog_lecture_fichier.c.obj	cd3533b2a3c9a21c
+1	153	7233489679166839	CMakeFiles/TDG_project.dir/heuristique.c.obj	6fd41c7abeeaadcb
+51	161	7233489679256865	CMakeFiles/TDG_project.dir/Sous_prog_optimisation.c.obj	5bc75c5aed42fb9a
+62	163	7233489679276861	CMakeFiles/TDG_project.dir/sous_prog.c.obj	fdd1feb3923dcec0
+75	163	7233489679286843	CMakeFiles/TDG_project.dir/Sous_prog_structures.c.obj	4072410302c6e8e
+163	303	7233489680643416	TDG_project.exe	f57e4cb1b21a515d
+1	70	7233490751311324	CMakeFiles/TDG_project.dir/Menu.c.obj	ee30895fe8668e98
+70	163	7233490752209765	TDG_project.exe	f57e4cb1b21a515d
+1	74	7233495488097773	CMakeFiles/TDG_project.dir/Menu.c.obj	ee30895fe8668e98
+74	174	7233495489068813	TDG_project.exe	f57e4cb1b21a515d
+1	68	7233495685519692	CMakeFiles/TDG_project.dir/Menu.c.obj	ee30895fe8668e98
+68	162	7233495686427549	TDG_project.exe	f57e4cb1b21a515d
